@@ -1,0 +1,62 @@
+###
+POST http://localhost:5000/api/users HTTP/1.1
+Content-Type: application/json
+
+{
+  "rol" : "CLIENTE",
+  "name": "Fredy",
+  "fechaNacimiento":"11/12/2024",
+  "fechaRegistro":"11/12/2024",
+  "email": "Fredy@email.com",
+  "password":"00000"
+ 
+}
+###
+POST http://localhost:5000/api/register HTTP/1.1
+Content-Type: application/json
+
+{
+  "rol" : "CLIENTE",
+  "name": "Fredy Alexander Espania garica",
+  "fechaNacimiento":"11/12/1988",
+  "fechaRegistro":"11/12/2022",
+  "email": "F@email.com",
+  "password":"12454654"
+ 
+}
+
+###
+POST http://localhost:5000/api/login HTTP/1.1
+Content-Type: application/json
+
+{
+  "email": "F@email.com",
+  "password":"12454654"
+}
+
+###
+GET http://localhost:5000/api/users HTTP/1.1
+
+###
+GET http://localhost:5000/api/users/636471c28eaa35b00ecf862f HTTP/1.1
+
+###
+DELETE http://localhost:5000/api/users/63602abed4021a3a10f831a5 HTTP/1.1
+
+###
+PUT http://localhost:5000/api/users/636471c28eaa35b00ecf862f HTTP/1.1
+Content-Type: application/json
+
+
+{
+  "producto" :[{"_id" : "636031d599c2c744fdd79792" }] 
+}
+###añadir compra a un usuario
+PUT http://localhost:5000/api/user/compra/63602b56d4021a3a10f831a7 HTTP/1.1
+Content-Type: application/json
+
+
+{
+  "compra" : "636031d199c2c744fdd79790"
+}
+
