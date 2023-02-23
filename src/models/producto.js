@@ -2,7 +2,7 @@ const mongoose = require("mongoose");
 
 const productoSchema = mongoose.Schema({
   imagePath: {
-    type: String,
+    type: Array,
     required: true,
   },
   name: {
@@ -21,8 +21,25 @@ const productoSchema = mongoose.Schema({
     type: String,
     required: true
   },
-  cantidad: {
+  precioC: {
+    type: String,
+    required: true
+  },
+  tallaBralette:{
+    type:Array,
+    required:true
+  },
+  tallaPanty:{
+    type:Array,
+    required:true
+  },
+  color:{
+    type:Array,
+    required:true
+  },
+  cantidadTotal: {
     type: Number,
+    required:true
   },
 });
 
