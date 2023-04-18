@@ -18,13 +18,13 @@ const port = process.env.PORT || 5000;
 app.use(express.json());
 app.use(cors());
 app.use("/api", lenceriaRoute);
-app.use("/api", userLogin);
-app.use("/api/:id",validatetoken,validateRol, userRoute);
+//app.use("/api", userLogin);
+//app.use("/api/:id",validatetoken,validateRol, userRoute);
 
 
 // routes
 app.get("/", (req, res) => {
-  res.send("Welcome to my API");
+  res.send("Bienvenido api Desiderium");
 });
 
 // mongodb connection
