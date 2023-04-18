@@ -4,7 +4,7 @@ var cors = require('cors')
 require("dotenv").config();
 const userRoute = require("./src/routes/user");
 const userLogin = require('./src/routes/userLogin')
-const productosRoute = require("./src/routes/productos");
+const lenceriaRoute = require("./src/routes/lenceria");
 
 const validatetoken = require('./src/middleware/validateToken');
 const validateRol = require('./src/middleware/validateRol');
@@ -17,7 +17,7 @@ const port = process.env.PORT || 5000;
 // middlewares
 app.use(express.json());
 app.use(cors());
-app.use("/api", productosRoute);
+app.use("/api", lenceriaRoute);
 app.use("/api", userLogin);
 app.use("/api/:id",validatetoken,validateRol, userRoute);
 

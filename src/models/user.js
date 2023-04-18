@@ -29,7 +29,7 @@ const userSchema = mongoose.Schema({
   },
   producto:[{
     type:mongoose.Schema.Types.ObjectId,
-    ref:'Producto',
+    ref:'Lenceria',
     autopopulate: true
   }]
 });

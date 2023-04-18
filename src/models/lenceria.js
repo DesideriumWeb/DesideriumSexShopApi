@@ -1,6 +1,6 @@
 const mongoose = require("mongoose");
 
-const productoSchema = mongoose.Schema({
+const lenceriaSchema = mongoose.Schema({
   imagePath: {
     type: Array,
     required: true,
@@ -43,4 +43,4 @@ const productoSchema = mongoose.Schema({
   },
 });
 
-module.exports = mongoose.model('Producto',productoSchema);
+module.exports = mongoose.model('Lenceria',lenceriaSchema);
