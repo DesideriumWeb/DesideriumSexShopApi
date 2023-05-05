@@ -17,12 +17,16 @@ Content-Type: application/json
 
 {
   "rol" : "CLIENTE",
-  "name": "Fredy Alexander Espania garica",
+  "name": "Fredy Alexander",
+  "lastName": "Espania garica",
+  "email": "Fdsd@email.com",
+  "telefono": "3218256885",
+  "ciudad": "Armenia",
+  "departamento": "Quindio",
+  "direccionResidencia": "cr19 barrio miraflores", 
   "fechaNacimiento":"11/12/1988",
   "fechaRegistro":"11/12/2022",
-  "email": "F@email.com",
   "password":"12454654"
- 
 }
 
 ###

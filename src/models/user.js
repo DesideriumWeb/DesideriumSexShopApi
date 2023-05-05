@@ -11,6 +11,30 @@ const userSchema = mongoose.Schema({
     type: String,
     required: true,
   },
+  lastName: {
+    type: String,
+    required: true,
+  },
+  email: {
+    type: String,
+    required: true
+  },
+  telefono: {
+    type: String,
+    required: true
+  },
+  ciudad: {
+    type: String,
+    required: true
+  },
+  departamento: {
+    type: String,
+    required: true
+  },
+  direccionResidencia: {
+    type: String,
+    required: true
+  },
   fechaNacimiento: {
     type: Date,
     required: true
@@ -18,11 +42,7 @@ const userSchema = mongoose.Schema({
   fechaRegistro: {
     type: Date,
     required: true
-  },
-  email: {
-    type: String,
-    required: true
-  },
+  }, 
   password:{
     type: String,
     required: true

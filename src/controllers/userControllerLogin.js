@@ -11,9 +11,14 @@ const jwt = require('jsonwebtoken');
 const schemaRegister = Joi.object({
     rol: Joi.string().min(3).max(255).required(),
     name: Joi.string().min(6).max(255).required(),
-    fechaNacimiento: Joi.date().required(),
-    fechaRegistro: Joi.date().required(),
+    lastName: Joi.string().min(6).max(255).required(),
     email: Joi.string().min(6).max(255).required().email(),
+    telefono: Joi.string().min(6).max(255).required(),
+    ciudad: Joi.string().min(6).max(255).required(),
+    departamento: Joi.string().min(6).max(255).required(),
+    direccionResidencia: Joi.string().min(10).max(255).required(),
+    fechaNacimiento: Joi.date().required(),
+    fechaRegistro: Joi.date().required(), 
     password: Joi.string().min(6).max(1024).required()
 })
 
@@ -45,9 +50,14 @@ module.exports = {
             {
                 rol: req.body.rol,
                 name: req.body.name,
-                fechaNacimiento: req.body.fechaNacimiento,
-                fechaRegistro: req.body.fechaRegistro,
+                lastName: req.body.lastName,
                 email: req.body.email,
+                telefono: req.body.telefono,
+                ciudad: req.body.ciudad,
+                departamento: req.body.departamento,
+                direccionResidencia: req.body.direccionResidencia,         
+                fechaNacimiento: req.body.fechaNacimiento,
+                fechaRegistro: req.body.fechaRegistro,             
                 password: password
             });
 
