@@ -10,16 +10,16 @@ const jwt = require('jsonwebtoken');
 // validacion de esquema para registrar un usuario
 const schemaRegister = Joi.object({
     rol: Joi.string().min(3).max(255).required(),
-    name: Joi.string().min(6).max(255).required(),
-    lastName: Joi.string().min(6).max(255).required(),
+    name: Joi.string().min(3).max(255).required(),
+    lastName: Joi.string().min(3).max(255).required(),
     email: Joi.string().min(6).max(255).required().email(),
     telefono: Joi.string().min(6).max(255).required(),
-    ciudad: Joi.string().min(6).max(255).required(),
-    departamento: Joi.string().min(6).max(255).required(),
-    direccionResidencia: Joi.string().min(10).max(255).required(),
+    ciudad: Joi.string().min(3).max(255).required(),
+    departamento: Joi.string().min(3).max(255).required(),
+    direccionResidencia: Joi.string().min(3).max(255).required(),
     fechaNacimiento: Joi.date().required(),
     fechaRegistro: Joi.date().required(), 
-    password: Joi.string().min(6).max(1024).required()
+    password: Joi.string().min(3).max(1024).required()
 })
 
 // validacion de esquema para login un usuario
