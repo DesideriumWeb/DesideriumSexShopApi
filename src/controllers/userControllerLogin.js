@@ -109,7 +109,7 @@ module.exports = {
            await user.save()
             .then((data) => {
                   senMail(req.body.email)
-                .then(result => res.status(200).send('Enviado'))
+                .then(result => res.status(200).send({error: false, mensaje: 'Usuario guardado conexito, verifica tu correo electronico' }))
                 .catch(error => console.log(error.message));
             })
             .catch((error) => res.json({ message: error + "Error al guardar el usuario" }));
