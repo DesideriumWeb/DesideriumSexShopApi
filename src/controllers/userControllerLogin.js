@@ -113,14 +113,6 @@ module.exports = {
                 .catch(error => console.log(error.message));
             })
             .catch((error) => res.json({ message: error + "Error al guardar el usuario" }));
-   
-        // if (!emailExiste){
-
-        //  await  
-              
-
-        // }
-
     },
 
 
