@@ -34,8 +34,8 @@ POST http://localhost:5000/api/login HTTP/1.1
 Content-Type: application/json
 
 {
-  "email": "F@email.com",
-  "password":"12454654"
+  "email": "faespanag@uqvirtual.edu.co",
+  "password":"123456789"
 }
 
 ###
