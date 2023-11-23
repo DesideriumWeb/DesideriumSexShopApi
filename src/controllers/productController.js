@@ -29,7 +29,6 @@ module.exports = {
     }
   },
 };
-
 //   // create producto lenceria
 // router.post("/lenceria", (req, res) => {
 //     const lenceria = lenceriaSchema(req.body);
