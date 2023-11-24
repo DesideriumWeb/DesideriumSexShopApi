@@ -19,7 +19,7 @@ GET http://localhost:5000/api/lencerias HTTP/1.1
 
 
 ###
-GET http://localhost:5000/api/product/lenceria HTTP/1.1
+GET http://localhost:5000/api/product/juguete HTTP/1.1
 
 ###
 GET http://localhost:5000/api/lenceria/636031d199c2c744fdd79790 HTTP/1.1
