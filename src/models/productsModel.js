@@ -65,7 +65,7 @@ const productosSchema = new Schema({
   bombaPene: [categoriaSchema],
   estimulacionAnal: [categoriaSchema],
   estimulacionProstata: [categoriaSchema],
-  masturbadores: [categoriaSchema],
+  masturbador: [categoriaSchema],
   bolasvaginales: [categoriaSchema],
   sexMachine: [categoriaSchema],
 });
