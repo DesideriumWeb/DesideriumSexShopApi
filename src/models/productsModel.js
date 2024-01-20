@@ -61,11 +61,12 @@ const productosSchema = new Schema({
   lubricante: [categoriaSchema],
   dildo: [categoriaSchema],
   vibrador: [categoriaSchema],
+  masturbador: [categoriaSchema],
+  plugAnal: [categoriaSchema],
   subcionadoClitoris: [categoriaSchema],
   bombaPene: [categoriaSchema],
   estimulacionAnal: [categoriaSchema],
   estimulacionProstata: [categoriaSchema],
-  masturbador: [categoriaSchema],
   bolasvaginales: [categoriaSchema],
   sexMachine: [categoriaSchema],
 });
