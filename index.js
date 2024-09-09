@@ -6,6 +6,9 @@ const userRoute = require("./src/routes/user");
 const userLogin = require('./src/routes/userLogin')
 const lenceriaRoute = require("./src/routes/lenceria");
 const productsRoute = require("./src/routes/productsRouter");
+const categoryRoute = require("./src/routes/categoryRouter");
+const productRoute = require("./src/routes/productRouter");
+
 
 const validatetoken = require('./src/middleware/validateToken');
 const validateRol = require('./src/middleware/validateRol');
@@ -20,8 +23,15 @@ app.use(express.json());
 app.use(cors());
 app.use("/api", lenceriaRoute);
 app.use("/api", userLogin);
+// Productos viejo
 app.use("/api", productsRoute);
+// Productos nuevo
+app.use("/api", productRoute);
+// Usuarios
 app.use("/api/:id", userRoute);
+
+// Category
+app.use("/api", categoryRoute);
 
 
 // routes

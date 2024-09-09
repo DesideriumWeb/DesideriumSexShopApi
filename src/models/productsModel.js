@@ -70,6 +70,7 @@ const productosSchema = new Schema({
   bolasvaginales: [categoriaSchema],
   sexMachine: [categoriaSchema],
 });
+
 const ProductosModel = mongoose.model('Productos', productosSchema);
 
 module.exports = ProductosModel;
