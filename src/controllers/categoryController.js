@@ -1,12 +1,12 @@
 const CategoryModel = require("../models/categoryModel");
-const { createApiResponse } = require ('../Dto/ApiResponse.js');
+const { createApiResponse } = require ('../utils/ApiResponse.js');
 const { ERROR_MESSAGES, SUCCESS_MESSAGES } = require('../constants/constants'); 
 
 
 module.exports = {
   saveCategory: async (req, res) => {
     try {
-      const { name, description } = req.body;
+      const { name, description} = req.body;
 
       // Validación básica para asegurar que se han enviado los datos necesarios
       if (!name || !description) {
@@ -34,7 +34,8 @@ module.exports = {
       // Crear una nueva instancia del modelo de Categoría
       const newCategory = new CategoryModel({
         name: nameLower, // Guardar en minúsculas
-        description
+        description,
+        estado : 1
       });
 
       // Guardar la categoría en la base de datos
@@ -118,7 +119,7 @@ module.exports = {
   updateCategory: async (req, res) => {
     try {
       const { id } = req.params;
-      const { name, description } = req.body;
+      const { name, description, estado } = req.body;
 
       if (!id) {
         return res.status(400).json(createApiResponse(
@@ -130,7 +131,7 @@ module.exports = {
 
       const updatedCategory = await CategoryModel.findByIdAndUpdate(
         id,
-        { name, description },
+        { name, description , estado},
         { new: true, runValidators: true }
       );
 

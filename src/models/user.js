@@ -19,27 +19,27 @@ const userSchema = mongoose.Schema({
     type: String,
     required: true
   },
-  telefono: {
+  phone: {
     type: String,
     required: true
   },
-  ciudad: {
+  city: {
     type: String,
     required: true
   },
-  departamento: {
+  deparment: {
     type: String,
     required: true
   },
-  direccionResidencia: {
+  address: {
     type: String,
     required: true
   },
-  fechaNacimiento: {
+  birthDate: {
     type: Date,
     required: true
   },
-  fechaRegistro: {
+  registrationDate: {
     type: Date,
     required: true
   }, 
@@ -47,11 +47,23 @@ const userSchema = mongoose.Schema({
     type: String,
     required: true
   },
-  producto:[{
-    type:mongoose.Schema.Types.ObjectId,
-    ref:'Lenceria',
-    autopopulate: true
-  }]
+  state:{
+    type: Number
+  },
+  cart: [
+    {
+      product: {
+        type: mongoose.Schema.Types.ObjectId,
+        ref: 'Product',  
+        required: true
+      },
+      quantity: {
+        type: Number,
+        required: true,
+        default: 1
+      }
+    }
+  ]
 });
 userSchema.plugin(require('mongoose-autopopulate'));
 module.exports = mongoose.model('User', userSchema);

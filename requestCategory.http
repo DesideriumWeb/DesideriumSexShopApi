@@ -1,21 +1,33 @@
 POST http://localhost:5000/api/categories HTTP/1.1
 Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2ZTFiODczNzY5MjY2NjdiZjVjZjg0YyIsInJvbCI6IkNMSUVOVEUiLCJuYW1lIjoiSnVhbiIsImxhc3ROYW1lIjoiUMOpcmV6IiwiZW1haWwiOiJmYWVzcGFuYWdAdXF2aXJ0dWFsLmVkdS5jbyIsImlhdCI6MTcyNjA2OTYxMiwiZXhwIjoxNzI2MTU2MDEyfQ.hGVSGNjFZdX1pAvJHyzdmZmdd6M4IloEFdnwXraahh0
+
 
 {
   "name": "BOmbas",
-  "description": "Categoria para dildos en todos los materiales como: pvc, silicona etc"
+  "description": "Categoria para dildos en todos los materiales como: pvc, silicona etc",
+  "estado" :1
 }
 ###
 GET http://localhost:5000/api/categories HTTP/1.1
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2ZTFiODczNzY5MjY2NjdiZjVjZjg0YyIsInJvbCI6IkNMSUVOVEUiLCJuYW1lIjoiSnVhbiIsImxhc3ROYW1lIjoiUMOpcmV6IiwiZW1haWwiOiJmYWVzcGFuYWdAdXF2aXJ0dWFsLmVkdS5jbyIsImlhdCI6MTcyNjA2OTYxMiwiZXhwIjoxNzI2MTU2MDEyfQ.hGVSGNjFZdX1pAvJHyzdmZmdd6M4IloEFdnwXraahh0
+
 ###
-GET http://localhost:5000/api/categories/66cfe94180a1d43f5001bc61 HTTP/1.1
+GET http://localhost:5000/api/categories/66e1a02a02077c2ceb031741 HTTP/1.1
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2ZTFiODczNzY5MjY2NjdiZjVjZjg0YyIsInJvbCI6IkNMSUVOVEUiLCJuYW1lIjoiSnVhbiIsImxhc3ROYW1lIjoiUMOpcmV6IiwiZW1haWwiOiJmYWVzcGFuYWdAdXF2aXJ0dWFsLmVkdS5jbyIsImlhdCI6MTcyNjA2OTYxMiwiZXhwIjoxNzI2MTU2MDEyfQ.hGVSGNjFZdX1pAvJHyzdmZmdd6M4IloEFdnwXraahh0
+
 ###
-PUT http://localhost:5000/api/categories/66cfe94180a1d43f5001bc61 HTTP/1.1
+PUT http://localhost:5000/api/categories/66e1a02a02077c2ceb031741 HTTP/1.1
 Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2ZTFiODczNzY5MjY2NjdiZjVjZjg0YyIsInJvbCI6IkNMSUVOVEUiLCJuYW1lIjoiSnVhbiIsImxhc3ROYW1lIjoiUMOpcmV6IiwiZW1haWwiOiJmYWVzcGFuYWdAdXF2aXJ0dWFsLmVkdS5jbyIsImlhdCI6MTcyNjA2OTYxMiwiZXhwIjoxNzI2MTU2MDEyfQ.hGVSGNjFZdX1pAvJHyzdmZmdd6M4IloEFdnwXraahh0
+
 
 {
   "name": "New Category Name",
-  "description": "Updated description of the category"
+  "description": "Updated description of the category",
+  "estado":1
 }
 ###
-DELETE http://localhost:5000/api/categories/66cfe94180a1d43f5001bc61 HTTP/1.1
+DELETE http://localhost:5000/api/categories/66df7990d532a0895383994f HTTP/1.1
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2ZTFiODczNzY5MjY2NjdiZjVjZjg0YyIsInJvbCI6IkNMSUVOVEUiLCJuYW1lIjoiSnVhbiIsImxhc3ROYW1lIjoiUMOpcmV6IiwiZW1haWwiOiJmYWVzcGFuYWdAdXF2aXJ0dWFsLmVkdS5jbyIsImlhdCI6MTcyNjA2OTYxMiwiZXhwIjoxNzI2MTU2MDEyfQ.hGVSGNjFZdX1pAvJHyzdmZmdd6M4IloEFdnwXraahh0
+
