@@ -39,6 +39,8 @@ app.get("/", (req, res) => {
   res.send("Bienvenido api Desiderium");
 });
 
+app.use(cors({ origin: '*' }));
+
 // mongodb connection
 mongoose
   .connect(process.env.MONGODB_URI)

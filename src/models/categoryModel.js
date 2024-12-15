@@ -5,7 +5,7 @@ const Schema = mongoose.Schema;
 const categorySchema = new Schema({
   name: { type: String, required: true },
   description: { type: String, required: true },
-  estado: { type: Number, required: false }
+  state: { type: Number, required: false }
 });
 
 const CategoryModel = mongoose.model('Category', categorySchema);

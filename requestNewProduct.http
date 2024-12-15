@@ -12,7 +12,7 @@ Content-Type: application/json
   "sizePanty": ["S", "M", "L"],
   "color": ["Rojo", "Negro", "Rosa"],
   "amountML": 100,
-  "category": "60d2f46f8c8c8c001f8c8c8c"  // Reemplaza con un ID válido de la categoría
+  "category": "66e1a02a02077c2ceb031741"  // Reemplaza con un ID válido de la categoría
 }
 ###
 GET http://localhost:5000/api/products HTTP/1.1
