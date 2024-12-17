@@ -1,5 +1,5 @@
 const express = require("express");
-const { saveCategory , getAllCategories , getCategoryById , updateCategory , deleteCategory} = require("../controllers/categoryController");
+const { saveCategory , getAllCategories , getCategoryById , updateCategory , deleteCategory, deleteCategoriesBulk} = require("../controllers/categoryController");
 const verifyToken = require("../middleware/validateToken");
 
 const router = express.Router();
@@ -18,5 +18,8 @@ router.put('/categories/:id', verifyToken, updateCategory);
 
 // Eliminar categoría
 router.delete('/categories/:id', verifyToken, deleteCategory);
+// Eliminar categoría masivo
+router.post('/categories/delete-bulk', verifyToken, deleteCategoriesBulk);
+
 
 module.exports = router;

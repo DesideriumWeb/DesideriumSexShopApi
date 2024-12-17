@@ -119,7 +119,7 @@ module.exports = {
   updateCategory: async (req, res) => {
     try {
       const { id } = req.params;
-      const { name, description, estado } = req.body;
+      const { name, description, state } = req.body;
 
       if (!id) {
         return res.status(400).json(createApiResponse(
@@ -131,7 +131,7 @@ module.exports = {
 
       const updatedCategory = await CategoryModel.findByIdAndUpdate(
         id,
-        { name, description , estado},
+        { name, description , state},
         { new: true, runValidators: true }
       );
 
@@ -190,6 +190,46 @@ module.exports = {
       return res.status(500).json(createApiResponse(
         null, 
         false, 
+        ERROR_MESSAGES.SERVER_ERROR
+      ));
+    }
+  },
+  deleteCategoriesBulk: async (req, res) => {
+    try {
+      const { ids } = req.body;
+console.log(ids);
+      // Validación: verificar si se proporcionó la lista de IDs
+      if (!ids || !Array.isArray(ids) || ids.length === 0) {
+        return res.status(400).json(createApiResponse(
+          null,
+          false,
+          ERROR_MESSAGES.VALIDATION_ERROR
+        ));
+      }
+
+      // Eliminar las categorías cuyos IDs estén en la lista
+      const result = await CategoryModel.deleteMany({
+        _id: { $in: ids }
+      });
+
+      if (result.deletedCount === 0) {
+        return res.status(404).json(createApiResponse(
+          null,
+          false,
+          ERROR_MESSAGES.NOT_FOUND
+        ));
+      }
+
+      return res.status(200).json(createApiResponse(
+        { deletedCount: result.deletedCount },
+        true,
+        SUCCESS_MESSAGES.CATEGORIES_DELETED
+      ));
+    } catch (error) {
+      console.error(error);
+      return res.status(500).json(createApiResponse(
+        null,
+        false,
         ERROR_MESSAGES.SERVER_ERROR
       ));
     }
