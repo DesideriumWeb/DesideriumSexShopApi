@@ -6,10 +6,10 @@ const { ERROR_MESSAGES, SUCCESS_MESSAGES } = require('../constants/constants');
 module.exports = {
   saveCategory: async (req, res) => {
     try {
-      const { name, description} = req.body;
+      const { name, description , state} = req.body;
 
       // Validación básica para asegurar que se han enviado los datos necesarios
-      if (!name || !description) {
+      if (!name || !description || !state) {
         return res.status(400).json(createApiResponse(
           null, 
           false, 
@@ -35,7 +35,7 @@ module.exports = {
       const newCategory = new CategoryModel({
         name: nameLower, // Guardar en minúsculas
         description,
-        estado : 1
+        state 
       });
 
       // Guardar la categoría en la base de datos
