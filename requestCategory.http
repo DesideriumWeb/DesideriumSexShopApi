@@ -1,11 +1,11 @@
 POST http://localhost:5000/api/categories HTTP/1.1
 Content-Type: application/json
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2ZTMyMmM0YzBmYjgyYTNiMzFlMzJjYSIsInJvbCI6IkNMSUVOVEUiLCJuYW1lIjoiSnVhbiIsImxhc3ROYW1lIjoiUMOpcmV6IiwiZW1haWwiOiJmYWVzcGFuYWdAdXF2aXJ0dWFsLmVkdS5jbyIsImlhdCI6MTczNDIyMDI1MSwiZXhwIjoxNzM0MzA2NjUxfQ.okt3_D4xCLTtsYYrWijdlMYbvuRq3zEbV_o6tq66ZgU
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2ZTMyMmM0YzBmYjgyYTNiMzFlMzJjYSIsInJvbCI6IkNMSUVOVEUiLCJuYW1lIjoiSnVhbiIsImxhc3ROYW1lIjoiUMOpcmV6IiwiZW1haWwiOiJmYWVzcGFuYWdAdXF2aXJ0dWFsLmVkdS5jbyIsImlhdCI6MTczNDQ4NzA0NiwiZXhwIjoxNzM0NTczNDQ2fQ.zbsJDHe4DZCXJFINzct3M3qoSEIxrhTMctf5OVIxN5k
 
 {
   "name": "Bombitas",
   "description": "Categoria para dildos en todos los materiales como: pvc, silicona etc",
-  "state" : 1
+  "state" : false
 }
 ###
 GET http://localhost:5000/api/categories HTTP/1.1

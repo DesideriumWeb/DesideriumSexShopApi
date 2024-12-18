@@ -9,7 +9,7 @@ module.exports = {
       const { name, description , state} = req.body;
 
       // Validación básica para asegurar que se han enviado los datos necesarios
-      if (!name || !description || !state) {
+      if (!name || !description) {
         return res.status(400).json(createApiResponse(
           null, 
           false, 
